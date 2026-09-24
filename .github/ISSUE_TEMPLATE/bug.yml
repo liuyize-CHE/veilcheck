@@ -1,0 +1,47 @@
+name: Bug 报告
+description: 功能无法使用、结果异常或界面出错
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请不要上传真实身份证、成绩单、聊天截图、账号或其他隐私文件。请使用人工制作的示例复现问题。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 发生了什么
+      description: 说明你做了什么、看到了什么。
+      placeholder: 上传两页 PDF 后，点击下一页没有反应……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你原本希望看到什么
+    validations:
+      required: true
+  - type: dropdown
+    id: file-type
+    attributes:
+      label: 文件类型
+      options:
+        - 图片
+        - PDF
+        - 文本
+        - 与文件类型无关
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器和版本
+      placeholder: Chrome 140 / Edge 140
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      placeholder: Windows 11 / macOS / Ubuntu
+  - type: textarea
+    id: synthetic-sample
+    attributes:
+      label: 合成复现样例（可选）
+      description: 只能提供不对应真实人物的人工样例或生成方法。

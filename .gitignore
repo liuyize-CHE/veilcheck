@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Local runtime and package-manager files
+.pnpm-store/
+.npm/
+npm-debug.log*
+pnpm-debug.log*
+
+# Generated outputs
+*.veilcheck.png
+*.veilcheck.pdf
+*.veilcheck-report.json
+coverage/
+dist/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example

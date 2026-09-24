@@ -1,0 +1,24 @@
+{
+  "name": "veilcheck",
+  "version": "0.6.1",
+  "type": "module",
+  "private": true,
+  "description": "Local privacy preflight before you share.",
+  "keywords": ["privacy", "redaction", "ocr", "pdf", "pii", "local-first"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check src/app.js && node --check src/detectors.js && node --check server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "benchmark": "node scripts/benchmark.mjs"
+  },
+  "dependencies": {
+    "@tesseract.js-data/chi_sim": "^1.0.0",
+    "@tesseract.js-data/eng": "^1.0.0",
+    "tesseract.js": "^7.0.0",
+    "tesseract.js-core": "^7.0.0"
+  }
+}
